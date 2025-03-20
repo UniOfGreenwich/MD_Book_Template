@@ -1,0 +1,6 @@
+[[questions]]
+type = "ShortAnswer"
+prompt.prompt = "What is the keyword for declaring a variable in Rust?"
+answer.answer = "let"
+context = "For example, you can write: `let x = 1`"
+id = "8560a66d-dc2a-4145-bced-d030a579b7ea"

@@ -14,5 +14,6 @@
 - [MarkDown Documentation](Markdown_Doc/Markdown_Doc.md)
   - [Alerts](Markdown_Doc/Alerts.md)
   - [Alerts Directives](Markdown_Doc/Alerts_Directives.md)
+  - [Quiz](Markdown_Doc/Quiz.md)
   - [Summary](Markdown_Doc/summary.md) 
 - [Placeholder]()
