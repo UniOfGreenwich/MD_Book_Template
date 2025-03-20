@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Alerts Directives - MD-Book Template for UoG</title>
+        <title>Quiz - MD-Book Template for UoG</title>
 
 
         <!-- Custom HTML head -->
@@ -139,7 +139,7 @@
                         <a href="https://github.com/uniofgreenwich/MD_Book_Template" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/uniofgreenwich/MD_Book_Template/edit/main/content/Markdown_Doc/Alerts_Directives.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/uniofgreenwich/MD_Book_Template/edit/main/content/Markdown_Doc/Quiz.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -168,81 +168,46 @@
 
                 <div id="content" class="content">
                     <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
-                        <h1 id="directives"><a class="header" href="#directives">Directives</a></h1>
-<p>All supported directives are listed below.</p>
-<p><code>note</code></p>
-<div id="admonition-note" class="admonition admonish-note" role="note" aria-labelledby="admonition-note-title">
+                        <h1 id="quiz"><a class="header" href="#quiz">Quiz</a></h1>
+<div id="admonition-important" class="admonition admonish-tip" role="note" aria-labelledby="admonition-important-title">
 <div class="admonition-title">
-<div id="admonition-note-title">
-<p>Note</p>
+<div id="admonition-important-title">
+<p>Important</p>
 </div>
-<a class="admonition-anchor-link" href="#admonition-note"></a>
+<a class="admonition-anchor-link" href="#admonition-important"></a>
 </div>
 <div>
-<p>Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.</p>
+<p>As of Version 1.1.0 this MDBook template now has the capability to embedded quizzes into markdown book, using:</p>
+<ul>
+<li>https://github.com/cognitive-engineering-lab/mdbook-quiz/releases/tag/v0.3.10</li>
+</ul>
 </div>
 </div>
-<p><code>abstract</code>, <code>summary</code>, <code>tldr</code></p>
-<div id="admonition-abstract" class="admonition admonish-abstract" role="note" aria-labelledby="admonition-abstract-title">
+<p>First, create a quiz file. Quizzes are encoded as TOML files (see <a href="https://github.com/cognitive-engineering-lab/mdbook-quiz#quiz-schema">Quiz schema</a>). For example</p>
+<pre><code class="language-toml"># quizzes/rust-variables.toml
+[[questions]]
+type = "ShortAnswer"
+prompt.prompt = "What is the keyword for declaring a variable in Rust?"
+answer.answer = "let"
+context = "For example, you can write: `let x = 1`"
+</code></pre>
+<div id="admonition-important-1" class="admonition admonish-tip" role="note" aria-labelledby="admonition-important-1-title">
 <div class="admonition-title">
-<div id="admonition-abstract-title">
-<p>Abstract</p>
+<div id="admonition-important-1-title">
+<p>Important</p>
 </div>
-<a class="admonition-anchor-link" href="#admonition-abstract"></a>
+<a class="admonition-anchor-link" href="#admonition-important-1"></a>
 </div>
 <div>
-<p>Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.</p>
+<p>When running mdbook-quiz locally, or when you check the source code for the deployment each question will have an<code>id</code> field auto generated</p>
 </div>
 </div>
-<p><code>info</code>, <code>todo</code></p>
-<div id="admonition-info" class="admonition admonish-info" role="note" aria-labelledby="admonition-info-title">
-<div class="admonition-title">
-<div id="admonition-info-title">
-<p>Info</p>
-</div>
-<a class="admonition-anchor-link" href="#admonition-info"></a>
-</div>
-<div>
-<p>Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.</p>
-</div>
-</div>
-<p><code>tip</code>, <code>hint</code>, <code>important</code></p>
-<div id="admonition-tip" class="admonition admonish-tip" role="note" aria-labelledby="admonition-tip-title">
-<div class="admonition-title">
-<div id="admonition-tip-title">
-<p>Tip</p>
-</div>
-<a class="admonition-anchor-link" href="#admonition-tip"></a>
-</div>
-<div>
-<p>Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.</p>
-</div>
-</div>
-<p><code>success</code>, <code>check</code>, <code>done</code></p>
-<div id="admonition-success" class="admonition admonish-success" role="note" aria-labelledby="admonition-success-title">
-<div class="admonition-title">
-<div id="admonition-success-title">
-<p>Success</p>
-</div>
-<a class="admonition-anchor-link" href="#admonition-success"></a>
-</div>
-<div>
-<p>Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.</p>
-</div>
-</div>
-<p><code>question</code>, <code>help</code>, <code>faq</code></p>
-<div id="admonition-question" class="admonition admonish-question" role="note" aria-labelledby="admonition-question-title">
-<div class="admonition-title">
-<div id="admonition-question-title">
-<p>Question</p>
-</div>
-<a class="admonition-anchor-link" href="#admonition-question"></a>
-</div>
-<div>
-<p>Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.</p>
-</div>
-</div>
-<p><code>warning</code>, <code>caution</code>, <code>attention</code></p>
+<p>and in the markdown file:</p>
+<pre><code class="language-md">And now, a _quiz_:
+
+{{#&lt;type&gt; ./quizzes/rust-variables.toml}}}
+
+</code></pre>
 <div id="admonition-warning" class="admonition admonish-warning" role="note" aria-labelledby="admonition-warning-title">
 <div class="admonition-title">
 <div id="admonition-warning-title">
@@ -251,121 +216,48 @@
 <a class="admonition-anchor-link" href="#admonition-warning"></a>
 </div>
 <div>
-<p>Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.</p>
+<p>Replace <code>&lt;type&gt;</code> with <code>quiz</code></p>
 </div>
 </div>
-<p><code>failure</code>, <code>fail</code>, <code>missing</code></p>
-<div id="admonition-failure" class="admonition admonish-failure" role="note" aria-labelledby="admonition-failure-title">
-<div class="admonition-title">
-<div id="admonition-failure-title">
-<p>Failure</p>
-</div>
-<a class="admonition-anchor-link" href="#admonition-failure"></a>
-</div>
-<div>
-<p>Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.</p>
-</div>
-</div>
-<p><code>danger</code>, <code>error</code></p>
-<div id="admonition-danger" class="admonition admonish-danger" role="note" aria-labelledby="admonition-danger-title">
-<div class="admonition-title">
-<div id="admonition-danger-title">
-<p>Danger</p>
-</div>
-<a class="admonition-anchor-link" href="#admonition-danger"></a>
-</div>
-<div>
-<p>Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.</p>
-</div>
-</div>
-<p><code>bug</code></p>
-<div id="admonition-bug" class="admonition admonish-bug" role="note" aria-labelledby="admonition-bug-title">
-<div class="admonition-title">
-<div id="admonition-bug-title">
-<p>Bug</p>
-</div>
-<a class="admonition-anchor-link" href="#admonition-bug"></a>
-</div>
-<div>
-<p>Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.</p>
-</div>
-</div>
-<p><code>example</code></p>
-<div id="admonition-example" class="admonition admonish-example" role="note" aria-labelledby="admonition-example-title">
-<div class="admonition-title">
-<div id="admonition-example-title">
-<p>Example</p>
-</div>
-<a class="admonition-anchor-link" href="#admonition-example"></a>
-</div>
-<div>
-<p>Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.</p>
-</div>
-</div>
-<p><code>quote</code>, <code>cite</code></p>
-<div id="admonition-quote" class="admonition admonish-quote" role="note" aria-labelledby="admonition-quote-title">
-<div class="admonition-title">
-<div id="admonition-quote-title">
-<p>Quote</p>
-</div>
-<a class="admonition-anchor-link" href="#admonition-quote"></a>
-</div>
-<div>
-<p>Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency.</p>
-</div>
-</div>
-<p><code>code</code></p>
-<div id="admonition-code" class="admonition admonish-code" role="note" aria-labelledby="admonition-code-title">
-<div class="admonition-title">
-<div id="admonition-code-title">
-<p>Code</p>
-</div>
-<a class="admonition-anchor-link" href="#admonition-code"></a>
-</div>
-<div>
-<pre><code class="language-c">
-int sum (int a, int b){
-    return a + b;
-}
-
+<p>And now, a <em>quiz</em>:</p>
+<div class="quiz-placeholder" data-quiz-name="&quot;quiz_1&quot;" data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;For example, you can write: `let x = 1`&quot;,&quot;id&quot;:&quot;8560a66d-dc2a-4145-bced-d030a579b7ea&quot;,&quot;type&quot;:&quot;ShortAnswer&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;let&quot;},&quot;prompt&quot;:{&quot;prompt&quot;:&quot;What is the keyword for declaring a variable in Rust?&quot;}}]}" data-quiz-show-bug-reporter="&quot;&quot;"></div>
+<p>Here is a multiple choice example:</p>
+<pre><code class="language-toml">[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "What does it mean if a variable `x` is immutable?"
+prompt.distractors = [
+  "`x` is stored in the immutable region of memory.",
+  "After being defined, `x` can be changed at most once.",
+  "You cannot create a reference to `x`."
+]
+answer.answer = "`x` cannot be changed after being assigned to a value."
+context = """
+Immutable means "not mutable", or not changeable.
+"""
 </code></pre>
-</div>
-</div>
-<p><code>terminal</code></p>
-<div id="admonition-terminal" class="admonition admonish-terminal" role="note" aria-labelledby="admonition-terminal-title">
+<div class="quiz-placeholder" data-quiz-name="&quot;quiz_2&quot;" data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Immutable means \&quot;not mutable\&quot;, or not changeable.\n&quot;,&quot;id&quot;:&quot;8d6624d4-0cea-4bb7-a487-6d52fb323915&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;`x` cannot be changed after being assigned to a value.&quot;},&quot;prompt&quot;:{&quot;distractors&quot;:[&quot;`x` is stored in the immutable region of memory.&quot;,&quot;After being defined, `x` can be changed at most once.&quot;,&quot;You cannot create a reference to `x`.&quot;],&quot;prompt&quot;:&quot;What does it mean if a variable `x` is immutable?&quot;}}]}" data-quiz-show-bug-reporter="&quot;&quot;"></div>
+<p>You can have more than one question per quiz, by stacking quizzes into one file <code>&lt;nameofquiz&gt;.toml</code>, the beauty is if you don't get them all correct you can revist the ones you got wrong.</p>
+<div id="admonition-warning-1" class="admonition admonish-warning" role="note" aria-labelledby="admonition-warning-1-title">
 <div class="admonition-title">
-<div id="admonition-terminal-title">
-<p>Terminal</p>
+<div id="admonition-warning-1-title">
+<p>Warning</p>
 </div>
-<a class="admonition-anchor-link" href="#admonition-terminal"></a>
+<a class="admonition-anchor-link" href="#admonition-warning-1"></a>
 </div>
 <div>
-<pre><code>$ pwd
-</code></pre>
+<p>Remember that question <code>id</code> is unique, so if you copy and paste repeated questions, remember to remove the <code>id</code> field</p>
 </div>
 </div>
-<p><code>output</code></p>
-<div id="admonition-output" class="admonition admonish-output" role="note" aria-labelledby="admonition-output-title">
-<div class="admonition-title">
-<div id="admonition-output-title">
-<p>Output</p>
-</div>
-<a class="admonition-anchor-link" href="#admonition-output"></a>
-</div>
-<div>
-<pre><code>$ pwd
-&gt; /path/to/present/working/directory
-</code></pre>
-</div>
-</div>
+<div class="quiz-placeholder" data-quiz-name="&quot;quiz_3&quot;" data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;For example, you can write: `let x = 1`&quot;,&quot;id&quot;:&quot;6fd3aca5-ad99-422d-92e2-285a426c04b6&quot;,&quot;type&quot;:&quot;ShortAnswer&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;let&quot;},&quot;prompt&quot;:{&quot;prompt&quot;:&quot;What is the keyword for declaring a variable in Rust?&quot;}},{&quot;context&quot;:&quot;Immutable means \&quot;not mutable\&quot;, or not changeable.\n&quot;,&quot;id&quot;:&quot;d68e575b-ecef-4d15-9239-f2e44c1e2012&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;`x` cannot be changed after being assigned to a value.&quot;},&quot;prompt&quot;:{&quot;distractors&quot;:[&quot;`x` is stored in the immutable region of memory.&quot;,&quot;After being defined, `x` can be changed at most once.&quot;,&quot;You cannot create a reference to `x`.&quot;],&quot;prompt&quot;:&quot;What does it mean if a variable `x` is immutable?&quot;}}]}" data-quiz-show-bug-reporter="&quot;&quot;"></div>
+<script type="text/javascript" src="../quiz/quiz-embed.iife.js"></script><link rel="stylesheet" type="text/css" href="../quiz/style.css">
                     </main>
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../Markdown_Doc/Alerts.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../Markdown_Doc/Alerts_Directives.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../Markdown_Doc/Quiz.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../Markdown_Doc/summary.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -375,11 +267,11 @@ int sum (int a, int b){
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../Markdown_Doc/Alerts.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../Markdown_Doc/Alerts_Directives.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../Markdown_Doc/Quiz.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../Markdown_Doc/summary.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

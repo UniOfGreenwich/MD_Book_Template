@@ -1,0 +1,20 @@
+[[questions]]
+type = "ShortAnswer"
+prompt.prompt = "What is the keyword for declaring a variable in Rust?"
+answer.answer = "let"
+context = "For example, you can write: `let x = 1`"
+id = "6fd3aca5-ad99-422d-92e2-285a426c04b6"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "What does it mean if a variable `x` is immutable?"
+prompt.distractors = [
+  "`x` is stored in the immutable region of memory.",
+  "After being defined, `x` can be changed at most once.",
+  "You cannot create a reference to `x`."
+]
+answer.answer = "`x` cannot be changed after being assigned to a value."
+context = """
+Immutable means "not mutable", or not changeable.
+"""
+id = "d68e575b-ecef-4d15-9239-f2e44c1e2012"
