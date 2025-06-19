@@ -33,6 +33,7 @@
         <link rel="stylesheet" href=".././theme/css/code.css">
         <link rel="stylesheet" href=".././theme/css/terminal.css">
         <link rel="stylesheet" href=".././theme/css/output.css">
+        <link rel="stylesheet" href=".././theme/css/mdbook-admonish.css">
 
         <!-- MathJax -->
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -116,16 +117,16 @@
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="burgundy">Burgundy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="dracula">Dracula</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ecoFriend">EcoFriend</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="kanagawa">Knagawa</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="pinkrose">Pinkrose</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="space">Space</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="sustain">Sustain</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="tender">Tender</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="tokyonight">Tokyonight</button></li>
                         </ul>
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
@@ -301,7 +302,7 @@ printf('%4u cube equals %4u \r', a, c)
 printf('The square root of %2u is %6.4f \r', a, d)
 </code></pre>
 <h3 id="footnote"><a class="header" href="#footnote">Footnote</a></h3>
-<p>Here's a sentence with a footnote. <sup class="footnote-reference"><a href="#1">1</a></sup></p>
+<p>Here's a sentence with a footnote. <sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup></p>
 <pre><code class="language-md">Here's a sentence with a footnote. [^1]
 </code></pre>
 <h3 id="heading-id"><a class="header" href="#heading-id">Heading ID</a></h3>
@@ -353,9 +354,6 @@ Contact the media</li>
 </code></pre>
 <pre><code class="language-md">[^1]: This is the footnote.
 </code></pre>
-<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
-<p>This is the footnote.</p>
-</div>
 <h2 id="html"><a class="header" href="#html">HTML</a></h2>
 <p>You can use HTML to further format the content inconjuction with markdown. Most commonly used tags are <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code> and <code>&lt;table&gt;</code></p>
 <h3 id="centering-content"><a class="header" href="#centering-content">Centering Content</a></h3>
@@ -401,7 +399,11 @@ Figure 2: Center content
     &lt;/tr&gt;
 &lt;/table&gt;
 </code></pre>
-
+<style>.scroll-to-top { font-size: 2.5rem; width: 3.2rem; height: 3.2rem; display: none; align-items: center; justify-content: center; position: fixed; padding: 0.75rem; bottom: 4rem; right: calc(1.25rem + 90px + var(--page-padding)); z-index: 999; cursor: pointer; border: none; color: var(--bg); background: var(--fg); border-radius: 50%; } .scroll-to-top.hidden { display: none; } .scroll-to-top i { transform: translateY(-2px); } @media (min-width: 1080px) { .scroll-to-top { display: flex; } }</style><button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()"> <i class="fa fa-angle-up"></i></button><script>const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" }); window.addEventListener("scroll", () => { const button = document.querySelector(".scroll-to-top"); button.classList.toggle("hidden", window.scrollY <200); });</script><style>footer { text-align: center; text-wrap: balance; margin-top: 5rem; display: flex; flex-direction: column; justify-content: center; align-items: center; } footer p { margin: 0; }</style><footer><p>Copyright © 2025 • Created with ❤️ by <a href="https://github.com/CompEng0001">CompEng0001</a></p></footer><hr>
+<ol class="footnote-definition"><li id="footnote-1">
+<p>This is the footnote. <a href="#fr-1-1">↩</a></p>
+</li>
+</ol>
                     </main>
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
