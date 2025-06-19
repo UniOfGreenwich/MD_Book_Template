@@ -217,5 +217,9 @@ Remember, this operation costs money!
 ```
 
 ~~~admonish title='expensive'
+
+```
 Remember, this operation costs money!
+```
+
 ~~~
