@@ -39,8 +39,8 @@ jobs:
         run: |
           curl -sSL -o embedify.zip https://github.com/MR-Addict/mdbook-embedify/releases/download/0.2.15/mdbook-embedify-0.2.15-x86_64-unknown-linux-gnu.zip
           unzip embedify.zip
-          chmod +x mdbook-embedify
-          mv mdbook-embedify ~/.cargo/bin/
+          chmod +x mdbook-embedify-0.2.15-x86_64-unknown-linux-gnu/mdbook-embedify
+          mv mdbook-embedify-0.2.15-x86_64-unknown-linux-gnu/mdbook-embedify ~/.cargo/bin/
 
       - name: Show mdbook version
         run: mdbook --version
@@ -52,7 +52,7 @@ jobs:
         run: mdbook-quiz --version
       - name: Show embedify version
         run: mdbook-embedify --version
-        
+
       - name: Generate QR code
         env:
           REPO_NAME: ${{ github.repository }}
