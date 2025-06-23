@@ -14,20 +14,30 @@ to be ignored at best, or may cause an error when attempting to build the book.
 1. ***Title*** - While optional, it's common practice to begin with a title, generally <code
    class="language-markdown"># Summary</code>. This is ignored by the parser however, and
    can be omitted.
+
+   ~~~admonish code
+   
    ```markdown
    # Summary
    ```
+   
+   ~~~
 
 1. ***Prefix Chapter*** - Before the main numbered chapters, prefix chapters can be added
    that will not be numbered. This is useful for forewords,
    introductions, etc. There are, however, some constraints. Prefix chapters cannot be
    nested; they should all be on the root level. And you cannot add
    prefix chapters once you have added numbered chapters.
+
+   ~~~admonish code
+   
    ```markdown
    [A Prefix Chapter](relative/path/to/markdown.md)
 
    - [First Chapter](relative/path/to/markdown2.md)
    ```
+
+   ~~~
 
 1. ***Part Title*** -
    Level 1 headers can be used as a title for the following numbered chapters.
@@ -35,15 +45,22 @@ to be ignored at best, or may cause an error when attempting to build the book.
    The title is rendered as unclickable text.
    Titles are optional, and the numbered chapters can be broken into as many parts as desired.
    Part titles must be h1 headers (one `#`), other heading levels are ignored.
+   ~~~admonish code
+   
    ```markdown
    # My Part Title
 
    - [First Chapter](relative/path/to/markdown.md)
    ```
 
+   ~~~
+
 1. ***Numbered Chapter*** - Numbered chapters outline the main content of the book
    and can be nested, resulting in a nice hierarchy
    (chapters, sub-chapters, etc.).
+   
+   ~~~admonish code
+   
    ```markdown
    # Title of Part
 
@@ -55,15 +72,23 @@ to be ignored at best, or may cause an error when attempting to build the book.
 
    - [Another Chapter](relative/path/to/markdown4.md)
    ```
+
+   ~~~
+
    Numbered chapters can be denoted with either `-` or `*` (do not mix delimiters). 
    
 1. ***Suffix Chapter*** - Like prefix chapters, suffix chapters are unnumbered, but they come after 
    numbered chapters.
+
+   ~~~admonish code
+   
    ```markdown
    - [Last Chapter](relative/path/to/markdown.md)
 
    [Title of Suffix Chapter](relative/path/to/markdown2.md)
    ```
+
+   ~~~
 
 1. ***Draft chapters*** - Draft chapters are chapters without a file and thus content.
    The purpose of a draft chapter is to signal future chapters still to be written.
@@ -79,6 +104,9 @@ to be ignored at best, or may cause an error when attempting to build the book.
 1. ***Separators*** - Separators can be added before, in between, and after any other element. They result
    in an HTML rendered line in the built table of contents.  A separator is
    a line containing exclusively dashes and at least three of them: `---`.
+
+   ~~~admonish code   
+   
    ```markdown
    # My Part Title
    
@@ -89,12 +117,17 @@ to be ignored at best, or may cause an error when attempting to build the book.
    - [First Chapter](relative/path/to/markdown2.md)
    ```
   
+   ~~~
 
 ### Example
 
 Below is the markdown source for the `SUMMARY.md` for this guide, with the resulting table
 of contents as rendered to the left.
 
+~~~admonish code
+   
 ```markdown
 {{#include ../SUMMARY.md}}
 ```
+
+~~~

@@ -9,12 +9,11 @@ Alerts
 ~~~admonish info
 A beautifully styled message.
 ~~~
-
 ```
 
 into this:
 
-~~~ info
+~~~admonish info
 A beautifully styled message.
 ~~~
 
@@ -218,8 +217,6 @@ Remember, this operation costs money!
 
 ~~~admonish title='expensive'
 
-```
 Remember, this operation costs money!
-```
 
 ~~~

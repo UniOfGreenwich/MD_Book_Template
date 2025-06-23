@@ -72,3 +72,12 @@ Currently the mdBook is approximately 60+ pages, and the environmental impact pe
 The environmental effects of paper production include deforestation, the use of enormous amounts of energy and water as well as air pollution and waste problems. Paper accounts for around 26% of total waste at landfills
 
 Therefore, please print only if this is really necessary.
+
+
+~~~admonish code
+
+```sh
+echo 
+```
+
+~~~

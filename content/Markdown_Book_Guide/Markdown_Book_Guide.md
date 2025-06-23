@@ -1,5 +1,8 @@
 # Documentation
 
+
+{../SUMMARY.md startline=5 endline=12 highlight=[6,10]}
+
 ~~~admonish note
 - Version: 1.0.0
 - View the deployment for a rendered documentation:
@@ -26,9 +29,10 @@ First set your username:
 
 ~~~admonish terminal
 
-```sh
+```sh linenumber=false
 git config --global user.name "YourGitHubUserName"
 ```
+
 ~~~
 
 Next set your email:
@@ -129,10 +133,14 @@ The copy the output from `ssh-ed25519 ... YourGitEmail` and follow the screensho
 
 <div align=center>
 
-1. ![](./figures/step6-4.png)
-2. ![](./figures/step6-5.png)
-3. ![](./figures/step6-6.png)
-4. ![](./figures/step6-7.png)
+![](./figures/step6-4.png)
+
+![](./figures/step6-5.png)
+
+![](./figures/step6-6.png)
+
+![](./figures/step6-7.png)
+
 </div>
 
 Once completed, go back to the terminal and lets check for a connection:

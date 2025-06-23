@@ -80,11 +80,9 @@ Rust is a multi-paradigm, general-purpose programming language designed for perf
 ~~~admonish code
 
 ```c
-
 int sum (int a, int b){
     return a + b;
 }
-
 ```
 ~~~
 

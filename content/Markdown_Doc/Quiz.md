@@ -13,6 +13,8 @@ As of Version 1.1.0 this MDBook template now has the capability to embedded quiz
 
 First, create a quiz file. Quizzes are encoded as TOML files (see [Quiz schema](https://github.com/cognitive-engineering-lab/mdbook-quiz#quiz-schema)). For example
 
+~~~admonish code
+
 ```toml
 # quizzes/rust-variables.toml
 [[questions]]
@@ -21,6 +23,8 @@ prompt.prompt = "What is the keyword for declaring a variable in Rust?"
 answer.answer = "let"
 context = "For example, you can write: `let x = 1`"
 ```
+
+~~~
 
 ~~~admonish important
 
@@ -31,12 +35,15 @@ When running mdbook-quiz locally, or when you check the source code for the depl
 
 and in the markdown file: 
 
+~~~admonish code
+
 ```md
 And now, a _quiz_:
 
 {{#<type> ./quizzes/rust-variables.toml}}}
-
 ```
+
+~~~
 
 ~~~admonish warning
 
@@ -50,6 +57,8 @@ And now, a _quiz_:
 
 
 Here is a multiple choice example: 
+
+~~~admonish code
 
 ```toml
 [[questions]]
@@ -65,6 +74,7 @@ context = """
 Immutable means "not mutable", or not changeable.
 """
 ```
+~~~
 
 {{#quiz ./quizzes/quiz_2.toml}}
 
