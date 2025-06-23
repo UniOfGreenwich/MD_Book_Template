@@ -185,6 +185,14 @@
 </div>
 </div>
 <p>First, create a quiz file. Quizzes are encoded as TOML files (see <a href="https://github.com/cognitive-engineering-lab/mdbook-quiz#quiz-schema">Quiz schema</a>). For example</p>
+<div id="admonition-code" class="admonition admonish-code" role="note" aria-labelledby="admonition-code-title">
+<div class="admonition-title">
+<div id="admonition-code-title">
+<p>Code</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-code"></a>
+</div>
+<div>
 <pre><code class="language-toml"># quizzes/rust-variables.toml
 [[questions]]
 type = "ShortAnswer"
@@ -192,6 +200,8 @@ prompt.prompt = "What is the keyword for declaring a variable in Rust?"
 answer.answer = "let"
 context = "For example, you can write: `let x = 1`"
 </code></pre>
+</div>
+</div>
 <div id="admonition-important-1" class="admonition admonish-tip" role="note" aria-labelledby="admonition-important-1-title">
 <div class="admonition-title">
 <div id="admonition-important-1-title">
@@ -204,11 +214,20 @@ context = "For example, you can write: `let x = 1`"
 </div>
 </div>
 <p>and in the markdown file:</p>
+<div id="admonition-code-1" class="admonition admonish-code" role="note" aria-labelledby="admonition-code-1-title">
+<div class="admonition-title">
+<div id="admonition-code-1-title">
+<p>Code</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-code-1"></a>
+</div>
+<div>
 <pre><code class="language-md">And now, a _quiz_:
 
 {{#&lt;type&gt; ./quizzes/rust-variables.toml}}}
-
 </code></pre>
+</div>
+</div>
 <div id="admonition-warning" class="admonition admonish-warning" role="note" aria-labelledby="admonition-warning-title">
 <div class="admonition-title">
 <div id="admonition-warning-title">
@@ -223,6 +242,14 @@ context = "For example, you can write: `let x = 1`"
 <p>And now, a <em>quiz</em>:</p>
 <div class="quiz-placeholder" data-quiz-name="&quot;quiz_1&quot;" data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;For example, you can write: `let x = 1`&quot;,&quot;id&quot;:&quot;8560a66d-dc2a-4145-bced-d030a579b7ea&quot;,&quot;type&quot;:&quot;ShortAnswer&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;let&quot;},&quot;prompt&quot;:{&quot;prompt&quot;:&quot;What is the keyword for declaring a variable in Rust?&quot;}}]}" data-quiz-show-bug-reporter="&quot;&quot;"></div>
 <p>Here is a multiple choice example:</p>
+<div id="admonition-code-2" class="admonition admonish-code" role="note" aria-labelledby="admonition-code-2-title">
+<div class="admonition-title">
+<div id="admonition-code-2-title">
+<p>Code</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-code-2"></a>
+</div>
+<div>
 <pre><code class="language-toml">[[questions]]
 type = "MultipleChoice"
 prompt.prompt = "What does it mean if a variable `x` is immutable?"
@@ -236,6 +263,8 @@ context = """
 Immutable means "not mutable", or not changeable.
 """
 </code></pre>
+</div>
+</div>
 <div class="quiz-placeholder" data-quiz-name="&quot;quiz_2&quot;" data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Immutable means \&quot;not mutable\&quot;, or not changeable.\n&quot;,&quot;id&quot;:&quot;8d6624d4-0cea-4bb7-a487-6d52fb323915&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;`x` cannot be changed after being assigned to a value.&quot;},&quot;prompt&quot;:{&quot;distractors&quot;:[&quot;`x` is stored in the immutable region of memory.&quot;,&quot;After being defined, `x` can be changed at most once.&quot;,&quot;You cannot create a reference to `x`.&quot;],&quot;prompt&quot;:&quot;What does it mean if a variable `x` is immutable?&quot;}}]}" data-quiz-show-bug-reporter="&quot;&quot;"></div>
 <p>You can have more than one question per quiz, by stacking quizzes into one file <code>&lt;nameofquiz&gt;.toml</code>, the beauty is if you don't get them all correct you can revist the ones you got wrong.</p>
 <div id="admonition-warning-1" class="admonition admonish-warning" role="note" aria-labelledby="admonition-warning-1-title">
@@ -297,6 +326,7 @@ Immutable means "not mutable", or not changeable.
 
         <!-- Custom JS scripts -->
         <script src=".././theme/pagetoc.js"></script>
+        <script src=".././theme/highlightjs-line-numbers.js"></script>
 
 
     </div>

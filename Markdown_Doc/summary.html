@@ -183,8 +183,18 @@ to be ignored at best, or may cause an error when attempting to build the book.<
 <p><em><strong>Title</strong></em> - While optional, it's common practice to begin with a title, generally <code
 class="language-markdown"># Summary</code>. This is ignored by the parser however, and
 can be omitted.</p>
+<div id="admonition-code" class="admonition admonish-code" role="note" aria-labelledby="admonition-code-title">
+<div class="admonition-title">
+<div id="admonition-code-title">
+<p>Code</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-code"></a>
+</div>
+<div>
 <pre><code class="language-markdown"># Summary
 </code></pre>
+</div>
+</div>
 </li>
 <li>
 <p><em><strong>Prefix Chapter</strong></em> - Before the main numbered chapters, prefix chapters can be added
@@ -192,10 +202,20 @@ that will not be numbered. This is useful for forewords,
 introductions, etc. There are, however, some constraints. Prefix chapters cannot be
 nested; they should all be on the root level. And you cannot add
 prefix chapters once you have added numbered chapters.</p>
+<div id="admonition-code-1" class="admonition admonish-code" role="note" aria-labelledby="admonition-code-1-title">
+<div class="admonition-title">
+<div id="admonition-code-1-title">
+<p>Code</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-code-1"></a>
+</div>
+<div>
 <pre><code class="language-markdown">[A Prefix Chapter](relative/path/to/markdown.md)
 
 - [First Chapter](relative/path/to/markdown2.md)
 </code></pre>
+</div>
+</div>
 </li>
 <li>
 <p><em><strong>Part Title</strong></em> -
@@ -204,15 +224,33 @@ This can be used to logically separate different sections of the book.
 The title is rendered as unclickable text.
 Titles are optional, and the numbered chapters can be broken into as many parts as desired.
 Part titles must be h1 headers (one <code>#</code>), other heading levels are ignored.</p>
+<div id="admonition-code-2" class="admonition admonish-code" role="note" aria-labelledby="admonition-code-2-title">
+<div class="admonition-title">
+<div id="admonition-code-2-title">
+<p>Code</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-code-2"></a>
+</div>
+<div>
 <pre><code class="language-markdown"># My Part Title
 
 - [First Chapter](relative/path/to/markdown.md)
 </code></pre>
+</div>
+</div>
 </li>
 <li>
 <p><em><strong>Numbered Chapter</strong></em> - Numbered chapters outline the main content of the book
 and can be nested, resulting in a nice hierarchy
 (chapters, sub-chapters, etc.).</p>
+<div id="admonition-code-3" class="admonition admonish-code" role="note" aria-labelledby="admonition-code-3-title">
+<div class="admonition-title">
+<div id="admonition-code-3-title">
+<p>Code</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-code-3"></a>
+</div>
+<div>
 <pre><code class="language-markdown"># Title of Part
 
 - [First Chapter](relative/path/to/markdown.md)
@@ -223,15 +261,27 @@ and can be nested, resulting in a nice hierarchy
 
 - [Another Chapter](relative/path/to/markdown4.md)
 </code></pre>
+</div>
+</div>
 <p>Numbered chapters can be denoted with either <code>-</code> or <code>*</code> (do not mix delimiters).</p>
 </li>
 <li>
 <p><em><strong>Suffix Chapter</strong></em> - Like prefix chapters, suffix chapters are unnumbered, but they come after
 numbered chapters.</p>
+<div id="admonition-code-4" class="admonition admonish-code" role="note" aria-labelledby="admonition-code-4-title">
+<div class="admonition-title">
+<div id="admonition-code-4-title">
+<p>Code</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-code-4"></a>
+</div>
+<div>
 <pre><code class="language-markdown">- [Last Chapter](relative/path/to/markdown.md)
 
 [Title of Suffix Chapter](relative/path/to/markdown2.md)
 </code></pre>
+</div>
+</div>
 </li>
 <li>
 <p><em><strong>Draft chapters</strong></em> - Draft chapters are chapters without a file and thus content.
@@ -248,6 +298,14 @@ Draft chapters are written like normal chapters but without writing the path to 
 <p><em><strong>Separators</strong></em> - Separators can be added before, in between, and after any other element. They result
 in an HTML rendered line in the built table of contents.  A separator is
 a line containing exclusively dashes and at least three of them: <code>---</code>.</p>
+<div id="admonition-code-5" class="admonition admonish-code" role="note" aria-labelledby="admonition-code-5-title">
+<div class="admonition-title">
+<div id="admonition-code-5-title">
+<p>Code</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-code-5"></a>
+</div>
+<div>
 <pre><code class="language-markdown"># My Part Title
 
 [A Prefix Chapter](relative/path/to/markdown.md)
@@ -256,13 +314,22 @@ a line containing exclusively dashes and at least three of them: <code>---</code
 
 - [First Chapter](relative/path/to/markdown2.md)
 </code></pre>
+</div>
+</div>
 </li>
 </ol>
 <h3 id="example"><a class="header" href="#example">Example</a></h3>
 <p>Below is the markdown source for the <code>SUMMARY.md</code> for this guide, with the resulting table
 of contents as rendered to the left.</p>
-<pre><code class="language-markdown">
-------------------------------------------------------
+<div id="admonition-code-6" class="admonition admonish-code" role="note" aria-labelledby="admonition-code-6-title">
+<div class="admonition-title">
+<div id="admonition-code-6-title">
+<p>Code</p>
+</div>
+<a class="admonition-anchor-link" href="#admonition-code-6"></a>
+</div>
+<div>
+<pre><code class="language-markdown">------------------------------------------------------
 ------------------------------------------------------
 
 - [Introduction](Introduction/Introduction.md)
@@ -281,7 +348,8 @@ of contents as rendered to the left.</p>
   - [Summary](Markdown_Doc/summary.md) 
 - [Placeholder]()
 </code></pre>
-<style>.scroll-to-top { font-size: 2.5rem; width: 3.2rem; height: 3.2rem; display: none; align-items: center; justify-content: center; position: fixed; padding: 0.75rem; bottom: 4rem; right: calc(1.25rem + 90px + var(--page-padding)); z-index: 999; cursor: pointer; border: none; color: var(--bg); background: var(--fg); border-radius: 50%; } .scroll-to-top.hidden { display: none; } .scroll-to-top i { transform: translateY(-2px); } @media (min-width: 1080px) { .scroll-to-top { display: flex; } }</style><button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()"> <i class="fa fa-angle-up"></i></button><script>const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" }); window.addEventListener("scroll", () => { const button = document.querySelector(".scroll-to-top"); button.classList.toggle("hidden", window.scrollY <200); });</script><style>footer { text-align: center; text-wrap: balance; margin-top: 5rem; display: flex; flex-direction: column; justify-content: center; align-items: center; } footer p { margin: 0; }</style><footer><p>Copyright © 2025 • Created with ❤️ by <a href="https://github.com/CompEng0001">CompEng0001</a></p></footer>
+</div>
+</div><style>.scroll-to-top { font-size: 2.5rem; width: 3.2rem; height: 3.2rem; display: none; align-items: center; justify-content: center; position: fixed; padding: 0.75rem; bottom: 4rem; right: calc(1.25rem + 90px + var(--page-padding)); z-index: 999; cursor: pointer; border: none; color: var(--bg); background: var(--fg); border-radius: 50%; } .scroll-to-top.hidden { display: none; } .scroll-to-top i { transform: translateY(-2px); } @media (min-width: 1080px) { .scroll-to-top { display: flex; } }</style><button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()"> <i class="fa fa-angle-up"></i></button><script>const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" }); window.addEventListener("scroll", () => { const button = document.querySelector(".scroll-to-top"); button.classList.toggle("hidden", window.scrollY <200); });</script><style>footer { text-align: center; text-wrap: balance; margin-top: 5rem; display: flex; flex-direction: column; justify-content: center; align-items: center; } footer p { margin: 0; }</style><footer><p>Copyright © 2025 • Created with ❤️ by <a href="https://github.com/CompEng0001">CompEng0001</a></p></footer>
                     </main>
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
@@ -322,6 +390,7 @@ of contents as rendered to the left.</p>
 
         <!-- Custom JS scripts -->
         <script src=".././theme/pagetoc.js"></script>
+        <script src=".././theme/highlightjs-line-numbers.js"></script>
 
 
     </div>
