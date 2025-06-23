@@ -131,3 +131,9 @@ of contents as rendered to the left.
 ```
 
 ~~~
+
+~~~admonish info
+
+asdasd 
+
+~~~
