@@ -58,6 +58,8 @@ jobs:
         run: mdbook-quiz --version
       - name: Show embedify version
         run: mdbook-embedify --version
+      - name: Show gitinfo version
+        run: mdbook-gitinfo --version
 
       - name: Generate QR code
         env:
