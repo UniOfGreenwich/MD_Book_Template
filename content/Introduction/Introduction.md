@@ -6,7 +6,7 @@ This mdBook will grow over the duration of this module with new labs/workshops a
 <tr>
 <td>
 
-The mdBook accessed outside of blackboard and is mobile and tablet friendly. :
+The mdBook accessed outside of Moodle and is mobile and tablet friendly. :
 - [https://uniofgreenwich.github.io/MD_Book_Template/](https://uniofgreenwich.github.io/MD_Book_Template/Introduction.html)
 - Or scan the QR code on the right:
 </td>
