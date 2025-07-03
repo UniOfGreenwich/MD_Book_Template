@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="light sidebar-visible" dir="ltr">
+<html lang="en" class="rust  sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -41,8 +41,9 @@
 
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc.js"></script>
@@ -67,7 +68,8 @@
 
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script>
-            var theme;
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             const html = document.documentElement;
@@ -117,6 +119,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Auto</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="dracula">Dracula</button></li>
@@ -175,7 +178,7 @@
 <table>
 <tr>
 <td>
-<p>The mdBook accessed outside of blackboard and is mobile and tablet friendly. :</p>
+<p>The mdBook accessed outside of Moodle and is mobile and tablet friendly. :</p>
 <ul>
 <li><a href="https://uniofgreenwich.github.io/MD_Book_Template/Introduction.html">https://uniofgreenwich.github.io/MD_Book_Template/</a></li>
 <li>Or scan the QR code on the right:</li>
@@ -234,7 +237,7 @@ Clicking a highlighted word or pressing the <code>Esc</code> key will remove the
 </code></pre>
 </div>
 </div><style>.scroll-to-top { font-size: 2.5rem; width: 3.2rem; height: 3.2rem; display: none; align-items: center; justify-content: center; position: fixed; padding: 0.75rem; bottom: 4rem; right: calc(1.25rem + 90px + var(--page-padding)); z-index: 999; cursor: pointer; border: none; color: var(--bg); background: var(--fg); border-radius: 50%; } .scroll-to-top.hidden { display: none; } .scroll-to-top i { transform: translateY(-2px); } @media (min-width: 1080px) { .scroll-to-top { display: flex; } }</style><button type="button" aria-label="scroll-to-top" class="scroll-to-top hidden" onclick="scrollToTop()"> <i class="fa fa-angle-up"></i></button><script>const scrollToTop = () => window.scroll({ top: 0, behavior: "smooth" }); window.addEventListener("scroll", () => { const button = document.querySelector(".scroll-to-top"); button.classList.toggle("hidden", window.scrollY <200); });</script><style>footer { text-align: center; text-wrap: balance; margin-top: 5rem; display: flex; flex-direction: column; justify-content: center; align-items: center; } footer p { margin: 0; }</style><footer><p>Copyright © 2025 • Created with ❤️ by <a href="https://github.com/CompEng0001">CompEng0001</a></p></footer>
-<footer><span class="gitinfo-footer" style="font-size:0.8em;padding:4px;margin:0.5em 0;text-align:right;display:block;">Page last updated: Thursday 26 June 2025 @ 13:53:04 | Commit: 77cc9bd</span></footer>
+<footer><span class="gitinfo-footer" style="font-size:0.8em;padding:4px;margin:0.5em 0;text-align:right;display:block;">Page last updated: Thursday 03 July 2025 @ 12:21:51 | Commit: 4ffb5cf</span></footer>
                     </main>
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
