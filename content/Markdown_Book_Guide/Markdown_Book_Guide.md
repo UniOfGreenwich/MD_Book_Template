@@ -1,8 +1,5 @@
 # Documentation
 
-
-{../SUMMARY.md startline=5 endline=12 highlight=[6,10]}
-
 ~~~admonish note
 - Version: 1.0.0
 - View the deployment for a rendered documentation:
@@ -11,7 +8,8 @@
 
 This template can used to create a place for all exercises or source of knowledge for your module, which is deployed as a webpage with the following address:
 
-`https://uniofgreenwich.github.io/Name_of_your_Repository`, best practice is to prefix with the module code.
+- Best practice is to prefix with the module code 
+  - `https://uniofgreenwich.github.io/Name_of_your_Repository`
 
 Examples: 
     
