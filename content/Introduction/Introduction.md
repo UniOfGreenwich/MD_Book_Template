@@ -12,7 +12,7 @@ The mdBook accessed outside of Moodle and is mobile and tablet friendly. :
 </td>
 <td>
 
-![](./mdbook-qr-code.png)
+<img src="./mdbook-qr-code.png" loading="eager">
 
 </td>
 </tr>
